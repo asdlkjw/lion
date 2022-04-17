@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from FAQ_model.views import support
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('FAQ/', support)
 ]
