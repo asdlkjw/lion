@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>게시판</title>
+<title>FAQ</title>
  
 </head>
 <body>
   <?$board_id=$_GET['board_id'];?>
     <div id="board_write">
-        <h4>글을 작성하는 공간입니다.</h4>
+        <h4>FAQ 공간입니다.</h4>
             <div id="write_area">
                 <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post">
+                    <div id="user">
+                        <th>생성자</th>
+                    </div>
+                    <div id="category">
+                        <select name="job">
+                            <option value="">카테고리</option>
+                            <option value="일반">일반</option>
+                            <option value="계정">계정</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </div>
                     <div id="in_title">
-                        <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
+                        <textarea name="title" id="utitle" rows="1" cols="30" placeholder="질문" maxlength="30" required></textarea>
                     </div>
  
                     <div class="wi_line"></div>
                     <div id="in_content">
-                        <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
+                        <textarea name="content" id="ucontent" rows="5" cols="30" placeholder="답변" required></textarea>
                     </div>
  
-                      <input type="file" name="SelectFile" />
- 
- 
-                    <div class="bt_se">
-                        <button type="submit">글 작성</button>
+                    {% comment %} <input type="file" name="SelectFile" /> {% endcomment %}
+                    <div id="date">
+                        <th>생성일시</th><br>
+                        <th>수정일시</th>
                     </div>
+ 
+                    {% comment %} <div class="bt_se">
+                        <button type="submit">답글 작성</button>
+                    </div> {% endcomment %}
                 </form>
             </div>
         </div>
