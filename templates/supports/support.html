@@ -11,7 +11,7 @@
         <h4>FAQ 공간입니다.</h4>
             <div id="write_area">
                 <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post">
-                    <div id="user">
+                    <div id= "user" class="txc-textbox" style="background-color:#eeeeee; border:#c1c1c1 1px solid; padding: 10px; height: 20px; width: 300px;">
                         <th>생성자</th>
                     </div>
                     <div id="category">
@@ -22,19 +22,18 @@
                             <option value="기타">기타</option>
                         </select>
                     </div>
-                    <div id="in_title">
-                        <textarea name="title" id="utitle" rows="1" cols="30" placeholder="질문" maxlength="30" required></textarea>
+
+                    <div class="txc-textbox" style="background-color:#eeeeee; border:#c1c1c1 1px solid; padding: 10px; height: 20px; width: 300px;">
+                        <th>{{ title }}</th>
                     </div>
- 
                     <div class="wi_line"></div>
-                    <div id="in_content">
-                        <textarea name="content" id="ucontent" rows="5" cols="30" placeholder="답변" required></textarea>
+                    <div class="txc-textbox" style="background-color:#eeeeee; border:#c1c1c1 1px solid; padding: 10px; height: 60px; width: 300px;">
+                        <th>{{ content }}</th>
                     </div>
  
                     {% comment %} <input type="file" name="SelectFile" /> {% endcomment %}
                     <div id="date">
-                        <th>생성일시</th><br>
-                        <th>수정일시</th>
+                        <th>작성일시 : {{date}}</th>
                     </div>
  
                     {% comment %} <div class="bt_se">
