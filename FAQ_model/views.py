@@ -8,4 +8,5 @@ def support(request):
         print(con.content)
 
         
-    return render(request, 'supports/support.html' )
+    # return render(request, 'supports/support.html' )
+    return render(request, 'supports/faq.html' )

@@ -19,5 +19,5 @@ from FAQ_model.views import support
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('FAQ/', support)
+    path('FAQ/', support),
 ]
